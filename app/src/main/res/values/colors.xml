@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="chip_checked">#3949AB</color>
+    <color name="chip_unchecked">#FFFFFF</color>
+    <color name="nav_selected">#3949AB</color>
+    <color name="nav_unselected">#9FA8DA</color>
+    <color name="blue_primary">#1976D2</color>
+    <color name="blue_dark">#1565C0</color>
+    <color name="blue_deep">#1A237E</color>
+    <color name="blue_medium">#3949AB</color>
+    <color name="blue_light">#5C6BC0</color>
+    <color name="blue_lighter">#9FA8DA</color>
+    <color name="blue_pale">#E8EAF6</color>
+    <color name="ic_launcher_background">#1976D2</color>
+    </resources>

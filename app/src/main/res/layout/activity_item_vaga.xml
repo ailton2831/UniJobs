@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="#FFFFFF"
+    app:strokeColor="#E8EAF6"
+    app:strokeWidth="1dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    tools:context=".vaga.ItemVaga">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/fotoEmpresa"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                app:cardCornerRadius="14dp"
+                app:cardBackgroundColor="#1A237E"
+                app:cardElevation="0dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="TS"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif-medium"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingStart="16dp">
+
+                <TextView
+                    android:id="@+id/profissao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Desenvolvedor Full Stack"
+                    android:textSize="18sp"
+                    android:textColor="#1A237E"
+                    android:fontFamily="sans-serif-medium"
+                    android:maxLines="1"
+                    android:ellipsize="end"/>
+
+                <TextView
+                    android:id="@+id/nomeEmpresa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tech Solutions CV"
+                    android:textSize="14sp"
+                    android:textColor="#5C6BC0"
+                    android:fontFamily="sans-serif"
+                    android:layout_marginTop="2dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/tipoVaga"
+                style="@style/Widget.MaterialComponents.Chip.Entry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Estágio"
+                app:chipBackgroundColor="#E8EAF6"
+                app:chipStrokeColor="#3949AB"
+                app:chipStrokeWidth="1dp"
+                android:textColor="#3949AB"
+                app:chipIcon="@drawable/minhas_vagas"
+                app:chipIconTint="#3949AB"
+                app:chipIconSize="18dp"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/localVaga"
+                style="@style/Widget.MaterialComponents.Chip.Entry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Santiago"
+                android:layout_marginStart="8dp"
+                app:chipBackgroundColor="#F5F5F5"
+                app:chipStrokeColor="#9E9E9E"
+                app:chipStrokeWidth="1dp"
+                android:textColor="#616161"
+                app:chipIcon="@drawable/company"
+                app:chipIconTint="#616161"
+                app:chipIconSize="18dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aberto"
+                android:textSize="16sp"
+                android:textColor="#1A237E"
+                android:fontFamily="sans-serif-medium"
+                android:drawablePadding="4dp"
+                android:drawableTint="#1A237E"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/descricaoVaga"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Estágio em desenvolvimento WEB com foco em tecnologias modernas e práticas ágeis."
+            android:textSize="14sp"
+            android:textColor="#424242"
+            android:fontFamily="sans-serif"
+            android:lineHeight="20sp"
+            android:layout_marginTop="16pt"
+            android:maxLines="2"
+            android:ellipsize="end"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonDetalhes"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Ver Detalhes"
+            android:textSize="14sp"
+            android:textColor="#FFFFFF"
+            android:fontFamily="sans-serif-medium"
+            app:cornerRadius="20dp"
+            app:backgroundTint="#3949AB"
+            app:icon="@drawable/ic_arrow_right"
+            app:iconTint="#FFFFFF"
+            app:iconSize="18dp"
+            app:iconPadding="6dp"
+            app:iconGravity="textEnd"
+            android:layout_marginTop="20dp"
+            android:elevation="2dp"
+            android:stateListAnimator="@null"/>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

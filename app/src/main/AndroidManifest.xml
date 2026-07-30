@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.UnicvJobs">
+        <activity
+            android:name=".empresa.TelaEspera"
+            android:exported="false" />
+        <activity
+            android:name=".vaga.ItemVaga"
+            android:exported="false" />
+        <activity
+            android:name=".estudante.Candidaturas"
+            android:exported="false" />
+        <activity
+            android:name=".estudante.PerfilAluno"
+            android:exported="false" />
+        <activity
+            android:name=".admin.Listas"
+            android:exported="false" />
+        <activity
+            android:name=".admin.Dashboard"
+            android:exported="false" />
+        <activity
+            android:name=".empresa.CriarVaga"
+            android:exported="false" />
+        <activity
+            android:name=".empresa.PerfilEmpresa"
+            android:exported="false" />
+        <activity
+            android:name=".empresa.SetupEmpresa"
+            android:noHistory="true"
+            android:exported="false" />
+        <activity
+            android:name=".empresa.MainActivityEmpresa"
+            android:exported="false" />
+        <activity
+            android:name=".estudante.MainActivityAluno"
+            android:exported="false" />
+        <activity
+            android:name=".estudante.SetupEstudante"
+            android:noHistory="true"
+            android:exported="false" />
+
+        <!-- ÚNICA Activity com LAUNCHER: é a porta de entrada do app -->
+        <activity
+            android:name=".splash.TelaSplash"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".autenticacao.TelaRegistar"
+            android:exported="false" />
+        <activity
+            android:name=".autenticacao.TelaLogin"
+            android:exported="false" />
+        <activity
+            android:name=".autenticacao.TelaAutenticacao"
+            android:exported="false" />
+        <activity
+            android:name=".admin.MainActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".vaga.DetalheVaga"
+            android:exported="false" />
+        <activity
+            android:name=".estudante.Candidato"
+            android:exported="false" />
+    </application>
+
+</manifest>

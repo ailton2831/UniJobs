@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7FA"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#3949AB"
+        android:elevation="8dp"
+        android:gravity="center_vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CV-Jobs"
+            android:textSize="24sp"
+            android:textColor="#FFFFFF"
+            android:fontFamily="sans-serif-medium"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/meuPerfil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Meu Perfil"
+                android:textColor="#1A237E"
+                android:textSize="32sp"
+                android:fontFamily="sans-serif-medium"
+                android:letterSpacing="-0.01"
+                android:lineHeight="38sp"
+                android:layout_marginBottom="24dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:padding="24dp"
+                android:elevation="4dp"
+                android:backgroundTint="#FFFFFF"
+                android:layout_marginBottom="24dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginBottom="24dp">
+
+                    <LinearLayout
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:background="#E8EAF6"
+                        android:gravity="center"
+                        android:layout_marginBottom="16dp">
+
+                        <TextView
+                            android:id="@+id/inicial"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="FL"
+                            android:textSize="32sp"
+                            android:textColor="#3949AB"
+                            android:fontFamily="sans-serif-medium"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/nomeUtilizador"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Fulano de Tal"
+                        android:textSize="20sp"
+                        android:textColor="#1A237E"
+                        android:gravity="center"
+                        android:fontFamily="sans-serif-medium"
+                        android:layout_marginBottom="4dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Estudante"
+                        android:textSize="14sp"
+                        android:textColor="#5C6BC0"
+                        android:gravity="center"
+                        android:fontFamily="sans-serif"
+                        android:layout_marginBottom="16dp"/>
+
+                    <Button
+                        android:id="@+id/botonEditaRPerfil"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:text="Editar Perfil"
+                        android:textSize="14sp"
+                        android:textColor="#3949AB"
+                        android:fontFamily="sans-serif-medium"
+                        android:backgroundTint="#F8FAFF"
+
+                        android:layout_marginBottom="24dp"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F1F3F9"
+                    android:layout_marginBottom="24dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Informações Pessoais"
+                        android:textSize="16sp"
+                        android:textColor="#3949AB"
+                        android:fontFamily="sans-serif-medium"
+                        android:layout_marginBottom="16dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_email"
+                            app:tint="#5C6BC0"
+                            android:layout_marginEnd="12dp"/>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Email"
+                                android:textSize="12sp"
+                                android:textColor="#5C6BC0"
+                                android:fontFamily="sans-serif"/>
+
+                            <TextView
+                                android:id="@+id/emailPerfil"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="fulano.tal@email.com"
+                                android:textSize="16sp"
+                                android:textColor="#1A237E"
+                                android:fontFamily="sans-serif"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/empresas"
+                            app:tint="#5C6BC0"
+                            android:layout_marginEnd="12dp"/>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Curso"
+                                android:textSize="12sp"
+                                android:textColor="#5C6BC0"
+                                android:fontFamily="sans-serif"/>
+
+                            <TextView
+                                android:id="@+id/cursoPerfil"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Engenharia Informática"
+                                android:textSize="16sp"
+                                android:textColor="#1A237E"
+                                android:fontFamily="sans-serif"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/company"
+                            app:tint="#5C6BC0"
+                            android:layout_marginEnd="12dp"/>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Instituição"
+                                android:textSize="12sp"
+                                android:textColor="#5C6BC0"
+                                android:fontFamily="sans-serif"/>
+
+                            <TextView
+                                android:id="@+id/universidadePerfil"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Universidade de Cabo Verde"
+                                android:textSize="16sp"
+                                android:textColor="#1A237E"
+                                android:fontFamily="sans-serif"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_grade"
+                            app:tint="#5C6BC0"
+                            android:layout_marginEnd="12dp"/>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Grau Acadêmico"
+                                android:textSize="12sp"
+                                android:textColor="#5C6BC0"
+                                android:fontFamily="sans-serif"/>
+
+                            <TextView
+                                android:id="@+id/grauPerfil"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Licenciatura"
+                                android:textSize="16sp"
+                                android:textColor="#1A237E"
+                                android:fontFamily="sans-serif"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_bar_aluno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:elevation="12dp"
+        app:menu="@menu/aluno_nav_bar"
+        app:labelVisibilityMode="labeled"
+        app:itemHorizontalTranslationEnabled="false"/>
+
+</LinearLayout>

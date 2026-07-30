@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F7FA"
+    android:fitsSystemWindows="true"
+    tools:context=".empresa.PerfilEmpresa">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/toolbar_gradient"
+        android:elevation="8dp"
+        app:titleTextColor="#FFFFFF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Perfil da Empresa"
+                android:textSize="22sp"
+                android:textColor="#FFFFFF"
+                android:fontFamily="sans-serif-medium"
+                android:letterSpacing="0.02"
+                android:shadowColor="#0D47A1"
+                android:shadowDx="0"
+                android:shadowDy="1"
+                android:shadowRadius="2"/>
+
+            <ImageView
+                android:id="@+id/btn_save_profile"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_save"
+                android:background="@drawable/circle_background_white_alpha"
+                android:padding="6dp"
+                android:visibility="gone"
+                app:tint="#FFFFFF" />
+
+        </LinearLayout>
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="80dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="#FFFFFF"
+                android:layout_marginBottom="24dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="24dp"
+                    android:gravity="center_horizontal">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginBottom="16dp"
+                        app:cardCornerRadius="50dp"
+                        app:cardBackgroundColor="#1A237E"
+                        app:cardElevation="6dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/text_company_initials"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="TS"
+                            android:textSize="32sp"
+                            android:textColor="#FFFFFF"
+                            android:gravity="center"
+                            android:fontFamily="sans-serif-medium"/>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Informações da Empresa"
+                        android:textSize="18sp"
+                        android:textColor="#1A237E"
+                        android:fontFamily="sans-serif-medium"
+                        android:layout_marginBottom="16dp"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_edit_mode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:text="Editar Perfil"
+                        android:textSize="13sp"
+                        android:textColor="#3949AB"
+                        android:fontFamily="sans-serif-medium"
+                        app:cornerRadius="18dp"
+                        app:backgroundTint="#E8EAF6"
+                        app:strokeColor="#3949AB"
+                        app:strokeWidth="1dp"
+                        app:icon="@drawable/ic_edit"
+                        app:iconTint="#3949AB"
+                        app:iconSize="16dp"
+                        app:iconPadding="4dp"
+                        android:elevation="2dp"
+                        android:stateListAnimator="@null"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="#FFFFFF"
+                android:layout_marginBottom="24dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Dados da Empresa"
+                        android:textSize="18sp"
+                        android:textColor="#1A237E"
+                        android:fontFamily="sans-serif-medium"
+                        android:layout_marginBottom="20dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nome da Empresa"
+                        android:textSize="14sp"
+                        android:textColor="#3949AB"
+                        android:fontFamily="sans-serif-medium"
+                        android:layout_marginBottom="8dp"/>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardBackgroundColor="#F8FAFF"
+                        app:cardElevation="0dp"
+                        app:strokeColor="#E8EAF6"
+                        app:strokeWidth="1dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/company"
+                                android:layout_marginRight="12dp"
+                                app:tint="#3949AB" />
+
+                            <EditText
+                                android:id="@+id/nomeEmpresa"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textSize="16sp"
+                                android:textColor="#1A237E"
+                                android:fontFamily="sans-serif"
+                                android:background="@android:color/transparent"
+                                android:hint="Ex: Tech Solutions CV"
+                                android:textColorHint="#9FA8DA"
+                                android:inputType="textCapWords"
+                                android:minHeight="48dp"
+                                android:paddingTop="12dp"
+                                android:paddingBottom="12dp"/>
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Área de Atividade"
+                        android:textSize="14sp"
+                        android:textColor="#3949AB"
+                        android:fontFamily="sans-serif-medium"
+                        android:layout_marginBottom="8dp"/>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardBackgroundColor="#F8FAFF"
+                        app:cardElevation="0dp"
+                        app:strokeColor="#E8EAF6"
+                        app:strokeWidth="1dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_business"
+                                android:layout_marginRight="12dp"
+                                app:tint="#3949AB" />
+
+                            <EditText
+                                android:id="@+id/areaEmpresa"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textSize="16sp"
+                                android:textColor="#1A237E"
+                                android:fontFamily="sans-serif"
+                                android:background="@android:color/transparent"
+                                android:hint="Ex: Tecnologia da Informação"
+                                android:textColorHint="#9FA8DA"
+                                android:minHeight="48dp"
+                                android:paddingTop="12dp"
+                                android:paddingBottom="12dp"/>
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Localização"
+                        android:textSize="14sp"
+                        android:textColor="#3949AB"
+                        android:fontFamily="sans-serif-medium"
+                        android:layout_marginBottom="8dp"/>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardBackgroundColor="#F8FAFF"
+                        app:cardElevation="0dp"
+                        app:strokeColor="#E8EAF6"
+                        app:strokeWidth="1dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/company"
+                                android:layout_marginRight="12dp"
+                                app:tint="#3949AB" />
+
+                            <EditText
+                                android:id="@+id/localEmpresa"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textSize="16sp"
+                                android:textColor="#1A237E"
+                                android:fontFamily="sans-serif"
+                                android:background="@android:color/transparent"
+                                android:hint="Ex: Praia, Santiago"
+                                android:textColorHint="#9FA8DA"
+                                android:minHeight="48dp"
+                                android:paddingTop="12dp"
+                                android:paddingBottom="12dp"/>
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Email de Contato"
+                        android:textSize="14sp"
+                        android:textColor="#3949AB"
+                        android:fontFamily="sans-serif-medium"
+                        android:layout_marginBottom="8dp"/>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardBackgroundColor="#F8FAFF"
+                        app:cardElevation="0dp"
+                        app:strokeColor="#E8EAF6"
+                        app:strokeWidth="1dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_email"
+                                android:layout_marginRight="12dp"
+                                app:tint="#3949AB" />
+
+                            <EditText
+                                android:id="@+id/emailEmpresa"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textSize="16sp"
+                                android:textColor="#1A237E"
+                                android:fontFamily="sans-serif"
+                                android:background="@android:color/transparent"
+                                android:hint="Ex: contacto@empresa.cv"
+                                android:textColorHint="#9FA8DA"
+                                android:inputType="textEmailAddress"
+                                android:minHeight="48dp"
+                                android:paddingTop="12dp"
+                                android:paddingBottom="12dp"/>
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Descrição da Empresa"
+                        android:textSize="14sp"
+                        android:textColor="#3949AB"
+                        android:fontFamily="sans-serif-medium"
+                        android:layout_marginBottom="8dp"/>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="12dp"
+                        app:cardBackgroundColor="#F8FAFF"
+                        app:cardElevation="0dp"
+                        app:strokeColor="#E8EAF6"
+                        app:strokeWidth="1dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp"
+                            android:paddingTop="12dp"
+                            android:paddingBottom="12dp">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_description"
+                                android:layout_marginRight="12dp"
+                                app:tint="#3949AB" />
+
+                            <EditText
+                                android:id="@+id/descricao"
+                                android:layout_width="0dp"
+                                android:layout_height="120dp"
+                                android:layout_weight="1"
+                                android:textSize="16sp"
+                                android:textColor="#1A237E"
+                                android:fontFamily="sans-serif"
+                                android:background="@android:color/transparent"
+                                android:hint="Descreva sua empresa, missão, valores..."
+                                android:textColorHint="#9FA8DA"
+                                android:gravity="top"
+                                android:inputType="textMultiLine"
+                                android:maxLines="5"/>
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Máximo 500 caracteres"
+                        android:textSize="12sp"
+                        android:textColor="#9FA8DA"
+                        android:textAlignment="viewEnd"
+                        android:layout_marginTop="4dp"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="#E8EAF6"
+                android:layout_marginBottom="24dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_info"
+                        android:layout_marginRight="12dp"
+                        app:tint="#3949AB" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="As informações do perfil são visíveis para todos os candidatos que visualizam suas vagas."
+                        android:textSize="12sp"
+                        android:textColor="#5C6BC0"
+                        android:lineHeight="16sp"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_bar_empresa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:elevation="12dp"
+        app:menu="@menu/empresa_nav_bar"
+        app:labelVisibilityMode="labeled"
+        app:itemHorizontalTranslationEnabled="false"
+        app:itemIconTint="@drawable/statelist_nav"
+        app:itemTextColor="@drawable/statelist_nav"/>
+
+</LinearLayout>

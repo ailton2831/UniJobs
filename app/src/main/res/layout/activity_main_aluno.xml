@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F7FA"
+    android:fitsSystemWindows="true"
+    tools:context=".estudante.MainActivityAluno">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/toolbar_gradient"
+        android:elevation="8dp"
+        app:titleTextColor="#FFFFFF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="CV-Jobs"
+                android:textSize="24sp"
+                android:textColor="#FFFFFF"
+                android:fontFamily="sans-serif-medium"
+                android:letterSpacing="0.03"
+                android:shadowColor="#0D47A1"
+                android:shadowDx="0"
+                android:shadowDy="1"
+                android:shadowRadius="2"/>
+
+            <TextView
+                android:id="@+id/logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LOGOUT"
+                android:textSize="16sp"
+                android:textColor="#BBDEFB"
+                android:fontFamily="sans-serif"
+                android:background="@drawable/count_badge"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="2dp"/>
+
+        </LinearLayout>
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="12dp"
+        android:background="#FFFFFF"
+        android:elevation="4dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Encontre Sua Vaga Ideal"
+            android:textSize="22sp"
+            android:textColor="#1A237E"
+            android:fontFamily="sans-serif-medium"
+            android:letterSpacing="-0.01"
+            android:lineHeight="28sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Explore oportunidades que combinam com você"
+            android:textSize="14sp"
+            android:textColor="#5C6BC0"
+            android:layout_marginTop="4dp"/>
+
+
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chip_filter_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:singleSelection="false"
+            app:chipSpacingHorizontal="8dp"
+            app:chipSpacingVertical="8dp">
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Todas"
+                app:chipBackgroundColor="@drawable/statelist_chip"
+                app:chipStrokeColor="#3949AB"
+                app:chipStrokeWidth="1dp"
+                app:checkedIconVisible="false"/>
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Estágio"
+                app:chipBackgroundColor="@drawable/statelist_chip"
+                app:chipStrokeColor="#3949AB"
+                app:chipStrokeWidth="1dp"
+                app:checkedIconVisible="false"/>
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Full-time"
+                app:chipBackgroundColor="@drawable/statelist_chip"
+                app:chipStrokeColor="#3949AB"
+                app:chipStrokeWidth="1dp"
+                app:checkedIconVisible="false"/>
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Emprego"
+                app:chipBackgroundColor="@drawable/statelist_chip"
+                app:chipStrokeColor="#3949AB"
+                app:chipStrokeWidth="1dp"
+                app:checkedIconVisible="false"/>
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Part-time"
+                app:chipBackgroundColor="@drawable/statelist_chip"
+                app:chipStrokeColor="#3949AB"
+                app:chipStrokeWidth="1dp"
+                app:checkedIconVisible="false"/>
+
+        </com.google.android.material.chip.ChipGroup>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/vagas"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingStart="16dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="80dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/activity_item_vaga" />
+
+        <LinearLayout
+            android:id="@+id/emptyStateView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="40dp"
+            android:visibility="gone"
+            android:background="#F5F7FA">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginBottom="24dp"
+                app:cardCornerRadius="60dp"
+                app:cardBackgroundColor="#E8EAF6"
+                app:cardElevation="4dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/minhas_vagas"
+                    android:tint="#3949AB"
+                    android:padding="30dp"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nenhuma vaga encontrada"
+                android:textSize="20sp"
+                android:textColor="#1A237E"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tente ajustar os filtros ou buscar por outras palavras-chave"
+                android:textSize="14sp"
+                android:textColor="#5C6BC0"
+                android:textAlignment="center"
+                android:maxWidth="260dp"
+                android:lineHeight="20sp"
+                android:layout_marginBottom="24dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_clear_filters"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Limpar Filtros"
+                android:textSize="14sp"
+                android:textColor="#3949AB"
+                android:fontFamily="sans-serif-medium"
+                app:cornerRadius="20dp"
+                app:backgroundTint="#E8EAF6"
+                app:strokeColor="#3949AB"
+                app:strokeWidth="1dp"
+                android:elevation="2dp"
+                android:stateListAnimator="@null"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_bar_aluno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:elevation="12dp"
+        app:menu="@menu/aluno_nav_bar"
+        app:labelVisibilityMode="labeled"
+        app:itemHorizontalTranslationEnabled="false"
+        app:itemIconTint="@drawable/statelist_nav"
+        app:itemTextColor="@drawable/statelist_nav"/>
+
+</LinearLayout>

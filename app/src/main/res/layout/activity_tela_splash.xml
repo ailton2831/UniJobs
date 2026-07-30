@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_background"
+    android:fitsSystemWindows="true"
+    tools:context=".splash.TelaSplash">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="40dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/logo_card"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_marginBottom="32dp"
+            app:cardCornerRadius="70dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardElevation="20dp"
+            android:elevation="20dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/minhas_vagas"
+                android:tint="#1A237E"
+                android:padding="35dp"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/text_app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CV-Jobs"
+            android:textSize="48sp"
+            android:textColor="#FFFFFF"
+            android:fontFamily="sans-serif-medium"
+            android:letterSpacing="0.08"
+            android:shadowColor="#0D47A1"
+            android:shadowDx="0"
+            android:shadowDy="3"
+            android:shadowRadius="6"/>
+
+        <TextView
+            android:id="@+id/text_tagline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Conectando talentos a oportunidades"
+            android:textSize="16sp"
+            android:textColor="#E3F2FD"
+            android:fontFamily="sans-serif"
+            android:letterSpacing="0.03"
+            android:textAlignment="center"
+            android:lineHeight="24sp"
+            android:maxWidth="280dp"
+            android:layout_marginTop="12dp"/>
+
+        <LinearLayout
+            android:id="@+id/loading_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="48dp">
+
+            <ProgressBar
+                android:id="@+id/progress_indicator"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginRight="12dp"
+                android:indeterminateTint="#FFFFFF"
+                android:indeterminateTintMode="src_in"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Carregando..."
+                android:textSize="14sp"
+                android:textColor="#BBDEFB"
+                android:fontFamily="sans-serif"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Versão 1.0.0"
+        android:textSize="12sp"
+        android:textColor="#90CAF9"
+        android:fontFamily="sans-serif"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"/>
+
+</RelativeLayout>
