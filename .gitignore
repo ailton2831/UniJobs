@@ -16,3 +16,5 @@ local.properties
 
 # adicionar:
 /app/google-services.json
+
+.idea/markdown.xml
