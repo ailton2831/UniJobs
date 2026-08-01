@@ -124,6 +124,8 @@ Este projeto consiste no desenvolvimento de uma aplicação móvel Android desti
       <img src="https://github.com/user-attachments/assets/abd376a4-07c4-4568-81f6-6600b1908ee3" width="220"/><br/>
       <sub><b>Perfil da empresa</b></sub>
     </td>
+  </tr>
+  <tr>
     <td align="center">
       <img src="https://github.com/user-attachments/assets/b0af2996-ece9-4aae-bf14-4ba12cf45646" width="220"/><br/>
       <sub><b>Publicar Nova Vaga</b></sub>
@@ -132,8 +134,6 @@ Este projeto consiste no desenvolvimento de uma aplicação móvel Android desti
       <img src="https://github.com/user-attachments/assets/a1df21eb-a4e9-4bab-a132-04325c6902d0" width="220"/><br/>
       <sub><b>Candidatos da vaga</b></sub>
     </td>
-  </tr>
-  <tr>
     <td align="center">
       <img src="https://github.com/user-attachments/assets/fb22c19c-4b9c-4a04-8d31-ee8d7d84c275" width="220"/><br/>
       <sub><b>Visualização do CV</b></sub>
