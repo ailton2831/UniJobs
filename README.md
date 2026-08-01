@@ -1,6 +1,6 @@
 # CV-Jobs
  
-Sistema de Gestão de Estágios e Empregos para Estudantes de Cabo Verde
+Aplicação Android de Gestão de Estágios e Empregos para Estudantes de Cabo Verde
  
 ## 📱 Sobre o Projeto
  
