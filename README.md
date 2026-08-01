@@ -106,23 +106,23 @@ Este projeto consiste no desenvolvimento de uma aplicação móvel Android desti
   <tr>
     <td align="center">
       <img src="https://github.com/user-attachments/assets/af12713a-6f70-4c4f-81cc-9ddd077962a1" width="220"/><br/>
-      <sub><b>Criando conta</b></sub>
+      <sub><b>Criar conta</b></sub>
     </td>
     <td align="center">
       <img src="https://github.com/user-attachments/assets/1dfd8f2e-6b90-4b34-9bd0-90ce02d57761" width="220"/><br/>
-      <sub><b>Colocando informações da empresa</b></sub>
+      <sub><b>Preencher informações</b></sub>
     </td>
     <td align="center">
       <img src="https://github.com/user-attachments/assets/344df1d6-9b1f-424b-b3ec-a07c8cb5153a" width="220"/><br/>
-      <sub><b>Tela de aprovação da Empresa na plataforma</b></sub>
+      <sub><b>Tela de aprovação</b></sub>
     </td>
     <td align="center">
       <img src="https://github.com/user-attachments/assets/564a854e-72b9-4f10-992e-aad2db98c685" width="220"/><br/>
-      <sub><b>Painel das vagas da Empresa</b></sub>
+      <sub><b>Painel das vagas</b></sub>
     </td>
     <td align="center">
       <img src="https://github.com/user-attachments/assets/abd376a4-07c4-4568-81f6-6600b1908ee3" width="220"/><br/>
-      <sub><b>Perfil da empresa</b></sub>
+      <sub><b>Perfil</b></sub>
     </td>
   </tr>
   <tr>
@@ -140,7 +140,7 @@ Este projeto consiste no desenvolvimento de uma aplicação móvel Android desti
     </td>
     <td align="center">
       <img src="https://github.com/user-attachments/assets/96e193be-5bb3-4e65-8409-5563a2797b16" width="220"/><br/>
-      <sub><b>O CV enviado</b></sub>
+      <sub><b>Ler o CV</b></sub>
     </td>
   </tr>
 </table>
