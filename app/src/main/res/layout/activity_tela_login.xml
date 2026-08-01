@@ -1,262 +1,268 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@drawable/auth_background"
     android:fitsSystemWindows="true"
+    android:fillViewport="true"
     tools:context=".autenticacao.TelaLogin">
 
-    <ImageView
-        android:id="@+id/button_back"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:src="@drawable/ic_arrow_back"
-        android:background="@drawable/circle_background_white_alpha"
-        android:padding="12dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        app:tint="#FFFFFF" />
-
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="137dp"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:padding="40dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="71dp"
-            android:layout_marginBottom="8dp"
-            android:fontFamily="sans-serif-medium"
-            android:letterSpacing="0.05"
-            android:shadowColor="#0D47A1"
-            android:shadowDx="0"
-            android:shadowDy="2"
-            android:shadowRadius="4"
-            android:text="CV-Jobs"
-            android:textColor="#FFFFFF"
-            android:textSize="30sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
-            android:letterSpacing="0.02"
-            android:lineHeight="24sp"
-            android:maxWidth="280dp"
-            android:text="Faça login na sua conta"
-            android:textAlignment="center"
-            android:textColor="#E3F2FD"
-            android:textSize="18sp" />
-
-    </LinearLayout>
-
-    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="32dp"
-        app:cardElevation="16dp"
-        app:cardBackgroundColor="#FFFFFF"
-        android:elevation="16dp"
-        android:layout_marginTop="20dp">
+        android:orientation="vertical"
+        android:background="@drawable/auth_background">
+
+        <ImageView
+            android:id="@+id/button_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_arrow_back"
+            android:background="@drawable/circle_background_white_alpha"
+            android:padding="12dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            app:tint="#FFFFFF" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:orientation="vertical"
-            android:padding="32dp">
+            android:padding="40dp">
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Entrar na Conta"
-                android:textSize="24sp"
-                android:textColor="#1A237E"
+                android:layout_marginBottom="8dp"
                 android:fontFamily="sans-serif-medium"
-                android:letterSpacing="-0.01"
-                android:lineHeight="32sp"
-                android:layout_marginBottom="24dp"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Email"
-                android:textSize="14sp"
-                android:textColor="#3949AB"
-                android:fontFamily="sans-serif-medium"
-                android:layout_marginBottom="8dp"/>
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                app:cardCornerRadius="12dp"
-                app:cardBackgroundColor="#F8FAFF"
-                app:cardElevation="0dp"
-                app:strokeColor="#E8EAF6"
-                app:strokeWidth="1dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical"
-                    android:paddingLeft="16dp"
-                    android:paddingRight="16dp"
-                    android:paddingTop="8dp"
-                    android:paddingBottom="8dp">
-
-                    <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:src="@drawable/ic_email"
-                        android:layout_marginRight="12dp"
-                        app:tint="#3949AB" />
-
-                    <EditText
-                        android:id="@+id/inputusername"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textSize="16sp"
-                        android:textColor="#1A237E"
-                        android:fontFamily="sans-serif"
-                        android:background="@android:color/transparent"
-                        android:hint="exemplo@email.com"
-                        android:textColorHint="#9FA8DA"
-                        android:inputType="textEmailAddress"
-                        android:minHeight="48dp"
-                        android:paddingTop="12dp"
-                        android:paddingBottom="12dp"/>
-
-                </LinearLayout>
-
-            </com.google.android.material.card.MaterialCardView>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Senha"
-                android:textSize="14sp"
-                android:textColor="#3949AB"
-                android:fontFamily="sans-serif-medium"
-                android:layout_marginBottom="8dp"/>
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="24dp"
-                app:cardCornerRadius="12dp"
-                app:cardBackgroundColor="#F8FAFF"
-                app:cardElevation="0dp"
-                app:strokeColor="#E8EAF6"
-                app:strokeWidth="1dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical"
-                    android:paddingLeft="16dp"
-                    android:paddingRight="16dp"
-                    android:paddingTop="8dp"
-                    android:paddingBottom="8dp">
-
-                    <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:src="@drawable/ic_lock"
-                        android:layout_marginRight="12dp"
-                        app:tint="#3949AB" />
-
-                    <EditText
-                        android:id="@+id/inputsenha"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textSize="16sp"
-                        android:textColor="#1A237E"
-                        android:fontFamily="sans-serif"
-                        android:background="@android:color/transparent"
-                        android:hint="Digite sua senha"
-                        android:textColorHint="#9FA8DA"
-                        android:inputType="textPassword"
-                        android:minHeight="48dp"
-                        android:paddingTop="12dp"
-                        android:paddingBottom="12dp"/>
-
-                    <ImageView
-                        android:id="@+id/btn_toggle_password"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:src="@drawable/ic_visibility_off"
-                        android:layout_marginLeft="12dp"
-                        android:padding="4dp"
-                        android:background="?attr/selectableItemBackground"
-                        android:clickable="true"
-                        android:focusable="true"
-                        app:tint="#5C6BC0" />
-
-                </LinearLayout>
-
-            </com.google.android.material.card.MaterialCardView>
-
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/buttonlogin"
-                android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:text="Entrar"
-                android:textSize="16sp"
+                android:letterSpacing="0.05"
+                android:shadowColor="#0D47A1"
+                android:shadowDx="0"
+                android:shadowDy="2"
+                android:shadowRadius="4"
+                android:text="CV-Jobs"
                 android:textColor="#FFFFFF"
-                android:fontFamily="sans-serif-medium"
-                app:cornerRadius="12dp"
-                app:backgroundTint="#3949AB"
-                app:icon="@drawable/ic_login"
-                app:iconTint="#FFFFFF"
-                app:iconGravity="textStart"
-                app:iconPadding="8dp"
-                android:elevation="4dp"
-                android:layout_marginBottom="24dp"
-                android:stateListAnimator="@null"/>
+                android:textSize="30sp" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:letterSpacing="0.02"
+                android:lineHeight="24sp"
+                android:maxWidth="280dp"
+                android:text="Faça login na sua conta"
+                android:textAlignment="center"
+                android:textColor="#E3F2FD"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="32dp"
+            app:cardElevation="16dp"
+            app:cardBackgroundColor="#FFFFFF"
+            android:elevation="16dp"
+            android:layout_marginTop="20dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center">
+                android:orientation="vertical"
+                android:padding="32dp">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Não tem uma conta?"
-                    android:textSize="14sp"
-                    android:textColor="#757575"/>
+                    android:text="Entrar na Conta"
+                    android:textSize="24sp"
+                    android:textColor="#1A237E"
+                    android:fontFamily="sans-serif-medium"
+                    android:letterSpacing="-0.01"
+                    android:lineHeight="32sp"
+                    android:layout_marginBottom="24dp"/>
 
                 <TextView
-                    android:id="@+id/txt_criar_conta"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text=" Criar conta"
+                    android:text="Email"
                     android:textSize="14sp"
                     android:textColor="#3949AB"
                     android:fontFamily="sans-serif-medium"
-                    android:padding="8dp"
-                    android:background="?attr/selectableItemBackground"
-                    android:clickable="true"
-                    android:focusable="true"/>
+                    android:layout_marginBottom="8dp"/>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardBackgroundColor="#F8FAFF"
+                    app:cardElevation="0dp"
+                    app:strokeColor="#E8EAF6"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_email"
+                            android:layout_marginRight="12dp"
+                            app:tint="#3949AB" />
+
+                        <EditText
+                            android:id="@+id/inputusername"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="16sp"
+                            android:textColor="#1A237E"
+                            android:fontFamily="sans-serif"
+                            android:background="@android:color/transparent"
+                            android:hint="exemplo@email.com"
+                            android:textColorHint="#9FA8DA"
+                            android:inputType="textEmailAddress"
+                            android:minHeight="48dp"
+                            android:paddingTop="12dp"
+                            android:paddingBottom="12dp"/>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Senha"
+                    android:textSize="14sp"
+                    android:textColor="#3949AB"
+                    android:fontFamily="sans-serif-medium"
+                    android:layout_marginBottom="8dp"/>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardBackgroundColor="#F8FAFF"
+                    app:cardElevation="0dp"
+                    app:strokeColor="#E8EAF6"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_lock"
+                            android:layout_marginRight="12dp"
+                            app:tint="#3949AB" />
+
+                        <EditText
+                            android:id="@+id/inputsenha"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="16sp"
+                            android:textColor="#1A237E"
+                            android:fontFamily="sans-serif"
+                            android:background="@android:color/transparent"
+                            android:hint="Digite sua senha"
+                            android:textColorHint="#9FA8DA"
+                            android:inputType="textPassword"
+                            android:minHeight="48dp"
+                            android:paddingTop="12dp"
+                            android:paddingBottom="12dp"/>
+
+                        <ImageView
+                            android:id="@+id/btn_toggle_password"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_visibility_off"
+                            android:layout_marginLeft="12dp"
+                            android:padding="4dp"
+                            android:background="?attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:focusable="true"
+                            app:tint="#5C6BC0" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonlogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:text="Entrar"
+                    android:textSize="16sp"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="sans-serif-medium"
+                    app:cornerRadius="12dp"
+                    app:backgroundTint="#3949AB"
+                    app:icon="@drawable/ic_login"
+                    app:iconTint="#FFFFFF"
+                    app:iconGravity="textStart"
+                    app:iconPadding="8dp"
+                    android:elevation="4dp"
+                    android:layout_marginBottom="24dp"
+                    android:stateListAnimator="@null"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Não tem uma conta?"
+                        android:textSize="14sp"
+                        android:textColor="#757575"/>
+
+                    <TextView
+                        android:id="@+id/txt_criar_conta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" Criar conta"
+                        android:textSize="14sp"
+                        android:textColor="#3949AB"
+                        android:fontFamily="sans-serif-medium"
+                        android:padding="8dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true"/>
+
+                </LinearLayout>
 
             </LinearLayout>
 
-        </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
 
-    </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
 
-</LinearLayout>
+</ScrollView>

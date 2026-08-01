@@ -109,7 +109,7 @@ class DetalheVaga : AppCompatActivity() {
                     statusVaga = status
 
                     menu.status.text = status
-                    menu.local.text = local
+                    menu.localVaga.text = local
                     menu.tipo.text = tipo
                     menu.area.text = area
                     menu.titulo.text = titulo

@@ -40,14 +40,19 @@ class MainActivityAluno : AppCompatActivity() {
 
         carregarVagas()
 
-        // filtro
+        // Filtro com verificação nula segura
         menu.chipFilterGroup.setOnCheckedStateChangeListener { group, checkedIds ->
             val chipId = checkedIds.firstOrNull()
 
             val listaFiltrada = if (chipId != null) {
-                val textoFiltro = findViewById<Chip>(chipId).text.toString()
-                if (textoFiltro == "Todas") listaOriginal
-                else listaOriginal.filter { it.tipo.equals(textoFiltro, ignoreCase = true) }
+                val chipSelecionado = group.findViewById<Chip>(chipId)
+                val textoFiltro = chipSelecionado?.text?.toString() ?: ""
+
+                if (textoFiltro.equals("Todas", ignoreCase = true) || textoFiltro.isEmpty()) {
+                    listaOriginal
+                } else {
+                    listaOriginal.filter { it.tipo.equals(textoFiltro, ignoreCase = true) }
+                }
             } else {
                 listaOriginal
             }
@@ -80,6 +85,8 @@ class MainActivityAluno : AppCompatActivity() {
                 listaOriginal.add(vaga)
             }
             atualizarInterface(listaOriginal)
+        }.addOnFailureListener {
+            atualizarInterface(emptyList())
         }
     }
 
@@ -101,6 +108,4 @@ class MainActivityAluno : AppCompatActivity() {
         startActivity(intent)
         finish()
     }
-
-
 }

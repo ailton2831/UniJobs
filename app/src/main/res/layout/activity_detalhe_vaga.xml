@@ -15,12 +15,24 @@
         android:elevation="8dp"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:paddingStart="20dp"
+        android:paddingStart="4dp"
         android:paddingEnd="20dp">
+
+        <!-- Botão voltar adicionado: tela de detalhe precisa de navegação visível -->
+        <ImageView
+            android:id="@+id/btn_voltar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="8dp"
+            android:src="@drawable/ic_arrow_back"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:tint="#FFFFFF"
+            android:contentDescription="Voltar"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
             android:text="CV-Jobs"
             android:textSize="24sp"
             android:textColor="#FFFFFF"
@@ -75,12 +87,19 @@
                         android:textColor="#5C6BC0"
                         android:textSize="14sp" />
 
+                    <!--
+                        cardBackgroundColor definido (verde como estado padrão "ABERTA").
+                        No código, trocar essa cor dinamicamente conforme o status real
+                        (ex: #2E7D32 aberta / #C62828 fechada / #F9A825 pendente),
+                        senão o badge fica invisível sobre o fundo branco do card.
+                    -->
                     <com.google.android.material.card.MaterialCardView
                         android:id="@+id/statusBadge"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingHorizontal="12dp"
                         android:paddingVertical="6dp"
+                        app:cardBackgroundColor="#2E7D32"
                         app:cardCornerRadius="12dp"
                         app:cardElevation="0dp">
 
@@ -227,7 +246,7 @@
                                     app:tint="#5C6BC0" />
 
                                 <TextView
-                                    android:id="@+id/local"
+                                    android:id="@+id/localVaga"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="sans-serif"
@@ -241,6 +260,12 @@
 
                     </LinearLayout>
 
+                    <!--
+                        Corrigido: altura fixa de 14dp (menor que o próprio ícone de
+                        16dp, cortava o conteúdo) trocada por wrap_content, igual
+                        às outras linhas. Coluna vazia ao lado removida — usar esse
+                        espaço para "Publicado em" ou similar caso queira.
+                    -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -295,12 +320,36 @@
                             android:layout_weight="1"
                             android:orientation="vertical">
 
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="Publicado em"
+                                android:textColor="#3949AB"
+                                android:textSize="14sp" />
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:gravity="center_vertical"
                                 android:orientation="horizontal">
 
+                                <ImageView
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:src="@drawable/ic_location"
+                                    app:tint="#5C6BC0" />
+
+                                <TextView
+                                    android:id="@+id/dataPublicacao"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="sans-serif"
+                                    android:text="12/07/2026"
+                                    android:textColor="#1A237E"
+                                    android:textSize="16sp" />
 
                             </LinearLayout>
 
@@ -350,6 +399,11 @@
                     android:textColor="#FFFFFF"
                     android:textSize="16sp" />
 
+                <!--
+                    Lembrete: confirma no código que bttnCandidatar (visível só p/ aluno)
+                    e botaoFecharVaga (visível só p/ empresa) usam visibility=GONE
+                    condicional, senão os dois aparecem juntos pra qualquer usuário.
+                -->
                 <Button
                     android:id="@+id/botaoFecharVaga"
                     android:layout_width="0dp"

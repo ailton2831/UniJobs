@@ -32,10 +32,8 @@ class TelaLogin : AppCompatActivity() {
 
         auth = Firebase.auth
 
-        // 1. Botão Voltar
         menu.buttonBack.setOnClickListener { finish() }
 
-        // 2. Alternar Visibilidade da Senha
         menu.btnTogglePassword.setOnClickListener {
             isPasswordVisible = !isPasswordVisible
             menu.inputsenha.inputType = if (isPasswordVisible) {
@@ -48,7 +46,6 @@ class TelaLogin : AppCompatActivity() {
             menu.inputsenha.setSelection(menu.inputsenha.text.length)
         }
 
-        // 3. Lógica de Login
         menu.buttonlogin.setOnClickListener {
             val email = menu.inputusername.text.toString().trim()
             val senha = menu.inputsenha.text.toString()
@@ -72,7 +69,6 @@ class TelaLogin : AppCompatActivity() {
                 }
         }
 
-        // 4. Ir para Tela de Registro
         menu.txtCriarConta.setOnClickListener {
             startActivity(Intent(this, TelaRegistar::class.java))
         }
@@ -87,24 +83,22 @@ class TelaLogin : AppCompatActivity() {
                 val perfilCompleto = document.getBoolean("perfilCompleto") ?: false
                 val status = document.getBoolean("status") ?: false
 
-                val intent = when {
+                val isAluno = tipo.equals("Estudante", ignoreCase = true) || tipo.equals("Aluno", ignoreCase = true)
+                val isEmpresa = tipo.equals("Empresa", ignoreCase = true)
+                val isAdmin = tipo.equals("Admin", ignoreCase = true)
 
-                    tipo == "Admin" -> Intent(this, MainActivity::class.java)
-                    // PASSO 1: Se o perfil está incompleto (independente de ser aluno ou empresa)
+                val intent = when {
+                    isAdmin -> Intent(this, MainActivity::class.java)
+
                     !perfilCompleto -> {
-                        if (tipo == "Empresa") Intent(this, SetupEmpresa::class.java)
+                        if (isEmpresa) Intent(this, SetupEmpresa::class.java)
                         else Intent(this, SetupEstudante::class.java)
                     }
 
-                    // PASSO 2: Perfil completo, mas se for Empresa, checa aprovação do Admin
-                    tipo == "Empresa" && !status -> {
-                        Intent(this, TelaEspera::class.java)
-                    }
+                    isEmpresa && !status -> Intent(this, TelaEspera::class.java)
 
-                    // PASSO 3: Se chegou aqui, está tudo OK. Vai para a Home correta
-                    tipo == "Estudante" -> Intent(this, MainActivityAluno::class.java)
-                    tipo == "Empresa"   -> Intent(this, MainActivityEmpresa::class.java)
-                    tipo == "Admin"     -> Intent(this, MainActivity::class.java)
+                    isAluno -> Intent(this, MainActivityAluno::class.java)
+                    isEmpresa -> Intent(this, MainActivityEmpresa::class.java)
                     else -> null
                 }
 
@@ -113,7 +107,7 @@ class TelaLogin : AppCompatActivity() {
                     finish()
                 } else {
                     menu.buttonlogin.isEnabled = true
-                    Toast.makeText(this, "Erro ao identificar fluxo do usuário.", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Tipo de usuário não reconhecido: $tipo", Toast.LENGTH_SHORT).show()
                 }
             } else {
                 menu.buttonlogin.isEnabled = true

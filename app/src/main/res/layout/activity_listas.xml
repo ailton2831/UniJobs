@@ -128,10 +128,10 @@
                         android:textColor="#5C6BC0"
                         android:layout_marginBottom="12dp"/>
 
-                    <ListView
+                    <com.example.unicvjobs.adapter.ScrollableListView
                         android:id="@+id/listaUsers"
                         android:layout_width="match_parent"
-                        android:layout_height="500dp"
+                        android:layout_height="wrap_content"
                         android:divider="#EEEEEE"
                         android:dividerHeight="1dp" />
 

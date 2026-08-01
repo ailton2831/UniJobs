@@ -55,12 +55,25 @@ class CandidaturaAdapter(var listaCandidatura: List<Candidatura>): RecyclerView.
         holder.aprovar.visibility = if (jaProcessado) View.GONE else View.VISIBLE
         holder.reprovar.visibility = if (jaProcessado) View.GONE else View.VISIBLE
 
-        // --- VER CV (abre o PDF no navegador/visualizador padrão do Android) ---
+        // --- VER Curriculum (abre o PDF no navegador/visualizador padrão do Android)
         holder.verCv.visibility = if (candidatura.cvUrl.isNotEmpty()) View.VISIBLE else View.GONE
         holder.verCv.setOnClickListener {
             if (candidatura.cvUrl.isNotEmpty()) {
-                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(candidatura.cvUrl))
-                context.startActivity(intent)
+                val uri = Uri.parse(candidatura.cvUrl)
+
+                // Configura o Intent especificando que é um PDF
+                val intent = Intent(Intent.ACTION_VIEW)
+                intent.setDataAndType(uri, "application/pdf")
+                intent.flags = Intent.FLAG_ACTIVITY_NO_HISTORY or Intent.FLAG_GRANT_READ_URI_PERMISSION
+
+                try {
+                    // Tenta abrir com um leitor de PDF nativo do celular
+                    context.startActivity(intent)
+                } catch (e: Exception) {
+                    // Se o usuário não tiver leitor de PDF instalado, faz o fallback para o navegador
+                    val fallbackIntent = Intent(Intent.ACTION_VIEW, uri)
+                    context.startActivity(fallbackIntent)
+                }
             } else {
                 Toast.makeText(context, "Este candidato não anexou CV", Toast.LENGTH_SHORT).show()
             }

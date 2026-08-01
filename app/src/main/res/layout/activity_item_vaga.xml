@@ -99,21 +99,21 @@
                 android:textColor="#3949AB"
                 app:chipIcon="@drawable/minhas_vagas"
                 app:chipIconTint="#3949AB"
-                app:chipIconSize="18dp"/>
+                app:chipIconSize="18dp"
+                android:layout_marginEnd="8dp"/>
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/localVaga"
                 style="@style/Widget.MaterialComponents.Chip.Entry"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Santiago"
-                android:layout_marginStart="8dp"
-                app:chipBackgroundColor="#F5F5F5"
-                app:chipStrokeColor="#9E9E9E"
+                android:text="Praia"
+                app:chipBackgroundColor="#E8EAF6"
+                app:chipStrokeColor="#3949AB"
                 app:chipStrokeWidth="1dp"
-                android:textColor="#616161"
-                app:chipIcon="@drawable/company"
-                app:chipIconTint="#616161"
+                android:textColor="#3949AB"
+                app:chipIcon="@drawable/ic_location"
+                app:chipIconTint="#3949AB"
                 app:chipIconSize="18dp"/>
 
         </LinearLayout>

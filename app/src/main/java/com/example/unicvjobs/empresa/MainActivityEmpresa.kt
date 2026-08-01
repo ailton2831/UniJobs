@@ -45,7 +45,6 @@ class MainActivityEmpresa : AppCompatActivity() {
         carregarVagasDaEmpresa(userUid)
         carregarTotalCandidaturas(userUid)
 
-
         menu.btnCreateFirst.setOnClickListener {
             startActivity(Intent(this, CriarVaga::class.java))
         }
@@ -58,17 +57,16 @@ class MainActivityEmpresa : AppCompatActivity() {
             }
         }
 
-        if (userUid != null) {
-            Firebase.firestore.collection("users").document(userUid).get()
-                .addOnSuccessListener { doc ->
-                    val aprovado = doc.getBoolean("status") ?: false
-                    if (!aprovado) {
-                        startActivity(Intent(this, TelaEspera::class.java))
-                        finish()
-                    }
+        db.collection("users").document(userUid).get()
+            .addOnSuccessListener { doc ->
+                val aprovado = doc.getBoolean("status") ?: false
+                if (!aprovado) {
+                    startActivity(Intent(this, TelaEspera::class.java))
+                    finish()
                 }
-        }
+            }
 
+        menu.logout.setOnClickListener { logout() }
     }
 
     private fun carregarVagasDaEmpresa(empresaUid: String) {
@@ -96,8 +94,6 @@ class MainActivityEmpresa : AppCompatActivity() {
                     menu.RVvagas.adapter = VagasAdapter(listaVagas)
                 }
             }
-
-        menu.logout.setOnClickListener { logout() }
     }
 
     private fun carregarTotalCandidaturas(empresaUid: String) {
@@ -107,7 +103,6 @@ class MainActivityEmpresa : AppCompatActivity() {
             .addOnSuccessListener { result ->
                 menu.textCandidaturas.text = result.size().toString()
             }
-
     }
 
     private fun logout() {

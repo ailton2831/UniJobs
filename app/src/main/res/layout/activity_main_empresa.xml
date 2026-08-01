@@ -102,10 +102,7 @@
                 android:layout_marginBottom="24dp"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="4dp"
-                app:cardBackgroundColor="#FFFFFF"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true"
-                android:focusable="true">
+                app:cardBackgroundColor="#FFFFFF">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -236,7 +233,7 @@
                                     android:layout_height="match_parent"
                                     android:text="0"
                                     android:textSize="18sp"
-                                    android:textColor="#F57C00"
+                                    android:textColor="#E65100"
                                     android:gravity="center"
                                     android:fontFamily="sans-serif-medium"/>
 
@@ -257,117 +254,43 @@
 
             </com.google.android.material.card.MaterialCardView>
 
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/list_card"
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="20dp"
-                app:cardElevation="4dp"
-                app:cardBackgroundColor="#FFFFFF"
-                android:outlineProvider="bounds">
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/RVvagas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"/>
 
                 <LinearLayout
+                    android:id="@+id/emptyStateView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="20dp">
+                    android:gravity="center"
+                    android:padding="32dp"
+                    android:visibility="gone">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                    <TextView
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center_vertical"
-                        android:layout_marginBottom="16dp">
+                        android:text="Nenhuma vaga cadastrada"
+                        android:textSize="18sp"
+                        android:textColor="#1A237E"
+                        android:fontFamily="sans-serif-medium"/>
 
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Suas Vagas"
-                            android:textSize="18sp"
-                            android:textColor="#1A237E"
-                            android:fontFamily="sans-serif-medium"/>
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/emptyStateView"
-                        android:layout_width="match_parent"
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnCreateFirst"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:gravity="center"
-                        android:padding="40dp"
-                        android:visibility="gone">
-
-                        <com.google.android.material.card.MaterialCardView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:layout_marginBottom="16dp"
-                            app:cardCornerRadius="40dp"
-                            app:cardBackgroundColor="#F5F5F5"
-                            app:cardElevation="2dp">
-
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:src="@drawable/minhas_vagas"
-                                android:padding="20dp"
-                                app:tint="#9FA8DA" />
-
-                        </com.google.android.material.card.MaterialCardView>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Nenhuma vaga publicada"
-                            android:textSize="16sp"
-                            android:textColor="#3949AB"
-                            android:fontFamily="sans-serif-medium"
-                            android:layout_marginBottom="8dp"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Comece criando sua primeira vaga de emprego"
-                            android:textSize="14sp"
-                            android:textColor="#7986CB"
-                            android:textAlignment="center"
-                            android:maxWidth="200dp"
-                            android:layout_marginBottom="20dp"/>
-
-                        <com.google.android.material.button.MaterialButton
-                            android:id="@+id/btn_create_first"
-                            android:layout_width="wrap_content"
-                            android:layout_height="36dp"
-                            android:text="Criar Vaga"
-                            android:textSize="13sp"
-                            android:textColor="#FFFFFF"
-                            android:fontFamily="sans-serif-medium"
-                            app:cornerRadius="18dp"
-                            app:backgroundTint="#3949AB"
-                            app:icon="@drawable/criar_vaga"
-                            app:iconTint="#FFFFFF"
-                            app:iconSize="16dp"
-                            app:iconPadding="4dp"
-                            android:elevation="2dp"
-                            android:stateListAnimator="@null"/>
-
-                    </LinearLayout>
-
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/RVvagas"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:divider="@null"
-                        android:dividerHeight="0dp"
-                        android:padding="4dp"
-                        tools:listitem="@layout/activity_item_vaga"
-                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+                        android:text="Criar Primeira Vaga"
+                        android:layout_marginTop="16dp"/>
 
                 </LinearLayout>
 
-            </com.google.android.material.card.MaterialCardView>
+            </FrameLayout>
 
         </LinearLayout>
 
@@ -380,9 +303,6 @@
         android:background="#FFFFFF"
         android:elevation="12dp"
         app:menu="@menu/empresa_nav_bar"
-        app:labelVisibilityMode="labeled"
-        app:itemHorizontalTranslationEnabled="false"
-        app:itemIconTint="@drawable/statelist_nav"
-        app:itemTextColor="@drawable/statelist_nav"/>
+        app:labelVisibilityMode="labeled"/>
 
 </LinearLayout>

@@ -374,13 +374,13 @@
 
                     </LinearLayout>
 
-                    <ListView
+                    <com.example.unicvjobs.adapter.ScrollableListView
                         android:id="@+id/listaCandidatura"
                         android:layout_width="match_parent"
-                        android:layout_height="347dp"
+                        android:layout_height="wrap_content"
                         android:divider="@null"
                         android:dividerHeight="10dp"
-                        android:nestedScrollingEnabled="true" />
+                        android:nestedScrollingEnabled="false" />
 
                 </LinearLayout>
 
