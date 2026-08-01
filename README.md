@@ -181,11 +181,11 @@ Este projeto consiste no desenvolvimento de uma aplicação móvel Android desti
 3. Crie um projeto no [Firebase Console](https://console.firebase.google.com) e ative:
    - Authentication (método Email/Senha)
    - Firestore Database
-4. Baixe o arquivo `google-services.json` do seu projeto Firebase e coloque em `app/google-services.json` (esse arquivo não é versionado no repositório por segurança).
+4. Baixe o arquivo `google-services.json` do seu projeto Firebase e coloque em `app/google-services.json`.
 5. Configure as **Regras de Segurança** do Firestore para exigir autenticação (ver seção abaixo).
 6. Crie uma conta gratuita no [Cloudinary](https://cloudinary.com) e configure:
    - Um **Upload Preset** do tipo **Unsigned** (Settings → Upload → Upload presets)
-   - Anote o **Cloud Name** (aparece no topo do Dashboard) e o nome do preset criado
+   - Anote o **Cloud Name** e o nome do preset criado
    - Insira esses dois valores em `Candidato.kt` (constantes `CLOUD_NAME` e `UPLOAD_PRESET`)
 7. Sincronize o Gradle e rode o app em um emulador ou dispositivo físico.
 
@@ -206,14 +206,14 @@ service cloud.firestore {
 
 ```
 com.example.unicvjobs
-├── admin/          # Dashboard e listagens administrativas
-├── autenticacao/    # Login, registo e tela de autenticação
-├── classes/         # Data classes (models): Vaga, Candidatura, User, Empresa
-├── empresa/         # Telas do perfil empresa: criar vaga, perfil, setup
-├── estudante/        # Telas do perfil aluno: candidaturas, perfil, setup
-├── vaga/             # Detalhe de vaga
-├── adapter/          # Adapters de RecyclerView (Vagas, Candidaturas)
-└── splash/           # Tela inicial de carregamento
+├── admin/        
+├── autenticacao/   
+├── classes/         
+├── empresa/         
+├── estudante/        
+├── vaga/            
+├── adapter/          
+└── splash/           
 ```
 
 ## 👥 Autores
